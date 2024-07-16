@@ -1,0 +1,245 @@
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        background-color: #11101b;
+    }
+
+     body {
+        overflow-y: scroll;
+    } 
+    
+    header{
+        width: 100%;
+        height: 80px;
+        background: #11101b;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px;
+    }
+
+    .logo{
+        font-size: 28px;
+        font-weight: bold;
+        color: #fefefe;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .nav-bar ul {
+        display: flex;
+    }
+
+    .nav-bar ul li a {
+        display: block;
+        color: #fefefe;
+        font-size: 20px;
+        padding: 10px 25px;
+        border-radius: 50px;
+        transition: 0.2s;
+        margin: 0 5px;
+        text-decoration: none;
+    }
+
+    .nav-bar ul li a:hover{
+        color:#11101b;
+        background: #fefefe;
+    }
+
+    .nav-bar ul li a.active{
+        color: #11101b;
+        background: #fefefe;
+    }
+
+
+
+    /*----------HOME PAGE KURT START------------*/
+
+    .home-kurt-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+        background-color: #11101b;
+        color: #fefefe;
+    }
+
+    .kurt-img {
+        width: 500px;
+        height: 400px;
+        filter: brightness(50%);
+        margin-left: 50px;
+        border-radius: 10px;
+    }
+
+    .home-kurt-container .text {
+        max-width: 500px;
+    }
+
+    .home-kurt-container h2 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .home-kurt-container h3 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .home-kurt-container p {
+        font-size: 20px;
+        opacity: 50%;
+    }
+
+    /*----------HOME PAGE KURT END------------*/
+
+    /* Home Info Section */
+    .home-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .info-img {
+        width: 200px; /* Adjust as needed */
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .info-text {
+        font-size: 20px;
+        color: #fefefe;
+    }
+
+    #typewriter-container {
+        font-size: 30px;
+        color: #fefefe;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative; 
+        display: inline-block; 
+    }
+
+    #typewriter-container::after { /*For caret (line when typing)*/
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -0.1em; 
+        height: 1em;
+        width: 0.2em; 
+        background-color: #fefefe;
+        animation: blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+        from, to {
+            background-color: transparent;
+        }
+        50% {
+            background-color: #fefefe;
+        }
+    }
+
+
+    .album-header {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 40px;
+        color: #fefefe;
+    }
+
+    .album-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .album-cover {
+        width: 200px;
+        height: 200px;
+        margin: 45px;
+        transition: transform 0.5s;
+        transform: perspective(600px) rotateY(-40deg);
+    }
+
+    .album-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        filter: grayscale(100%);
+        transition: filter 0.5s;
+    }
+    .album-cover:hover img {
+        filter: grayscale(0%);
+    }
+
+    .album-cover:hover {
+        transform: rotateY(0);
+    }
+
+
+
+    @media only screen and (max-width: 800px)
+    {
+        .hamburger 
+        {
+            display: block;
+            cursor: pointer;
+        }
+        .hamburger .line 
+        {
+            width: 30px;
+            height: 3px;
+            background: #fefefe;
+            margin: 6px;
+        }
+        .nav-bar 
+        {
+            height: 0;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            background: #11101b;
+            transition: 0.2s;
+            overflow: hidden;
+        }
+
+        .nav-bar.active
+        {
+            height: 450px;
+        }
+
+        .nav-bar ul {
+            display: block;
+            width: fit-content;
+            margin: 80px auto 0 auto;
+            text-align: center;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .nav-bar.active ul 
+        {
+            opacity: 1;
+        }
+
+        .nav-bar ul li a 
+        {
+            margin-bottom: 12px;
+            /* color: red; */
+        }
+    }
+
