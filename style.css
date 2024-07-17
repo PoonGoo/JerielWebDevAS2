@@ -108,14 +108,14 @@
     }
 
     .info-img {
-        width: 200px; /* Adjust as needed */
+        width: 500px; /* Adjust as needed */
         height: auto;
         border-radius: 10px;
         margin-bottom: 10px;
     }
 
     .info-text {
-        font-size: 20px;
+        font-size: 30px;
         color: #fefefe;
     }
 
@@ -153,7 +153,7 @@
     .album-header {
         text-align: center;
         font-size: 36px;
-        margin-top: 40px;
+        margin-top: 100px;
         color: #fefefe;
     }
 
@@ -180,6 +180,7 @@
         filter: grayscale(100%);
         transition: filter 0.5s;
     }
+
     .album-cover:hover img {
         filter: grayscale(0%);
     }
@@ -188,6 +189,165 @@
         transform: rotateY(0);
     }
 
+
+
+/*----------------GAME PAGE START-----------------*/
+#game h2 {
+    color: #fefefe; /* White text color */
+    font-size: 36px; /* Adjust font size as needed */
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Space between title and timer */
+}
+
+#startButton {
+    background-color: transparent;
+    color: #fefefe;
+    font-size: 24px;
+    padding: 15px 30px;
+    border: 2px solid #fefefe;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+}
+
+    #timer {
+        color: #fefefe;
+        font-size: 40px;
+        text-align: center;
+        margin: 20px auto;
+        display: none; 
+    }
+
+    .game-board {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin: 20px auto; /* Center the game board */
+        width: fit-content; /* Adjust width as needed */
+    }
+    
+    .card {
+        width: 200px;
+        height: 250px;
+        position: relative;
+        perspective: 1000px;
+        margin: 0 auto; /* Center each card */
+        transition: transform 0.5s ease; /* Smooth transition for transform */
+    }
+    
+    .card:hover {
+        transform: scale(1.1); /* Scale up the card on hover */
+    }
+    
+    .card .card-back,
+    .card .card-front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        transition: transform 0.5s, opacity 0.5s; 
+    }
+
+    .card .card-back {
+        background-color: #333; 
+        z-index: 1; 
+        transform: rotateY(0deg); 
+    }
+
+    .card .card-front {
+        transform: rotateY(180deg);
+        z-index: 2; 
+    }
+
+    .card.flipped .card-back {
+        transform: rotateY(-180deg); 
+        z-index: 1; 
+    }
+
+    .card.flipped .card-front {
+        transform: rotateY(0deg); 
+        z-index: 2;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    #restartButton {
+        background-color: transparent;
+        color: #fefefe;
+        font-size: 24px;
+        padding: 15px 30px;
+        border: 2px solid #fefefe;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 20px auto;
+        display: block;
+        width: fit-content;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
+    }
+    
+    #restartButton:hover {
+        background-color: #fefefe;
+        color: #11101b;
+    }
+    
+    #winScreen {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    #winText {
+        font-size: 36px;
+        color: #fefefe;
+    }
+
+    .animate-button {
+        animation: pulse 0.5s ease-in-out;
+    }
+    
+    #startButton {
+        background-color: transparent;
+        color: #fefefe;
+        font-size: 24px;
+        padding: 15px 30px;
+        border: 2px solid #fefefe;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 20px auto;
+        display: block;
+        width: fit-content;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    #startButton:hover {
+        background-color: #fefefe;
+        color: #11101b;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+/*----------------GAME PAGE END-----------------*/
 
 
     @media only screen and (max-width: 800px)
@@ -204,6 +364,7 @@
             background: #fefefe;
             margin: 6px;
         }
+
         .nav-bar 
         {
             height: 0;
@@ -239,7 +400,6 @@
         .nav-bar ul li a 
         {
             margin-bottom: 12px;
-            /* color: red; */
         }
     }
 

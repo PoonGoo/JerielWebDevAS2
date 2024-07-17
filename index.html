@@ -1,77 +1,53 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="style.css">
-        
-        <title>Muse</title>
-    </head>
-    <body>
-      <header>
-        <div class="logo">Muse</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Muse</title>
+</head>
+<body>
+  <header>
+    <div class="logo">Muse</div>
 
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
 
-        <nav class="nav-bar">
-            <ul>
-                <li>
-                    <a href="" class="active">Home</a>
-                </li>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#bands" class="nav-link">Bands</a></li>
+            <li><a href="#game" class="nav-link">Game</a></li>
+        </ul>
+    </nav>
+  </header>
 
-                <li>
-                    <a href="">Gallery</a>
-                </li>
+  <div id="home" class="section">
 
-                <li>
-                    <a href="">Bands</a>
-                </li>
-
-                <li>
-                    <a href="">Game</a>
-                </li>
-
-            </ul>
-        </nav>
-
-      </header>
-
-      <div class="home-kurt-container">
+    <div class="home-kurt-container">
         <div class="text">
             <h2>90's Rock <br>Scene</h2>
             <h3>Learn about the music scene</h3>     
             <p>Explore the website!</p>
         </div>
         <img src="images/kurtCobain.jpg" class="kurt-img" alt="Kurt cobain image" width="500" height="400">
+    </div>
 
-      </div>
-
-
-
-     <!-- <div class="home-info">
-         <img src="images/gnrHome.jfif" alt="Centered Image" class="info-img">
-         <p class="info-text">
-            This website will be about the 90s rock era, featuring legendary rock stars and bands, <br>the famous guitars they used, and the iconic hits they produced.
-        </p>
-     </div> -->
-
-     
-     <div class="home-info">
-        <img src="images/gnrHome.jfif" alt="Centered Image" class="info-img">
+    <div class="home-info">
+        <img src="images/slashPlaying.gif" alt="Centered Image" class="info-img">
         <h2 class="info-text">What's the website about?</h2>
         <div id="typewriter-container"></div>
-      </div>
+    </div>
 
+    <h2 class="album-header">Hit Records in the 90s</h2>
 
-      <h2 class="album-header">Hit Records in the 90s</h2>
-
-      <div class="album-container">
-
+    <div class="album-container">
         <div class="album-cover">
             <img src="images/californiacation.jpg" alt="Image 1">
         </div>
@@ -84,10 +60,34 @@
         <div class="album-cover">
             <img src="images/californiacation.jpg" alt="Image 4">
         </div>
-
     </div>
 
-    <script src="script.js"></script>
+  </div>
 
-    </body>
+  <div id="gallery" class="section" style="display: none;">
+    <h2>Gallery</h2>
+  </div>
+
+  <div id="bands" class="section" style="display: none;">
+    <h2>Bands</h2>
+  </div>
+
+  <div id="game" class="section" style="display: none;">
+    <h2>Memory Card Game</h2>
+    
+    <div id="timer">Time: 0s</div>
+    <button id="startButton">Start Game</button>
+    <div id="gameBoard" class="game-board"></div>
+
+    <div id="winScreen" style="display: none;">
+        <h2 id="winText">You Win!</h2>
+        <button id="restartButton">Restart Game</button>
+
+    </div>
+    
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
 </html>
