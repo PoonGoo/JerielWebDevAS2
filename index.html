@@ -36,11 +36,11 @@
             <h3>Learn about the music scene</h3>     
             <p>Explore the website!</p>
         </div>
-        <img src="images/kurtCobain.jpg" class="kurt-img" alt="Kurt cobain image" width="500" height="400">
+        <img src="images/kurt-cobain.jpg" class="kurt-img" alt="Kurt cobain image" width="500" height="400">
     </div>
 
     <div class="home-info">
-        <img src="images/slashPlaying.gif" alt="Centered Image" class="info-img">
+        <img src="images/slash-playing.gif" alt="Centered Image" class="info-img">
         <h2 class="info-text">What's the website about?</h2>
         <div id="typewriter-container"></div>
     </div>
@@ -64,25 +64,144 @@
 
   </div>
 
-  <div id="gallery" class="section" style="display: none;">
-    <h2>Gallery</h2>
+  <div id="gallery" class="section">
+    <h2 class="slider-header">Famous Guitars In The 90s</h2>
+
+    <div class="slider">
+        <div class="list">
+
+            <div class="item active">
+                <img src="images/slider-one.jpg">
+
+                <div class="content">
+                    <p>Famous Guitars</p>
+                    <h2>Johnny Greenwood</h2>
+                    <p>
+                        Johnny Greenwood lead guitarists of the Radiohead is most known for his Telecaster Plus "Version 1"
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/slider-two.jpg">
+                <div class="content">
+                    <p>Famous Guitars</p>
+                    <h2>Billie Joe Armstrong</h2>
+                    <p>
+                       The singer and the lead gutiarists of Green Day, uses a Fernandes S-Style nicknamed "Blue".
+                    </p>
+                </div>
+            </div> 
+
+            <div class="item">
+                <img src="images/slider-three.jpg">
+                <div class="content">
+                    <p>Famous Guitars</p>
+                    <h2>Eddie Van Halen</h2>
+                    <p>
+                        Eddie Van Halen lead guitarists of van halen uses a Music Man EVH 5150
+                        known as the Frankenstrat. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/slider-four.jpg">
+                <div class="content">
+                    <p>Famous Guitars</p>
+                    <h2>James Hetfield</h2>
+                    <p>
+                        Metallica lead singer and rhythm guitarists uses a ESP MX220 featured heavily on the
+                        And Justice For All tour.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/slider-five.png">
+                <div class="content">
+                    <p>Famous Guitars</p>
+                    <h2>Noel Gallagher</h2>
+                    <p>
+                        Lead singer and guitarists of the rock band Oasis uses a 96 Ephiphone 
+                        known as the Union Jack.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        
+        <!-- thumbnail -->
+        <div class="thumbnail">
+
+            <div class="item active">
+                <img src="images/slider-guitar.jpg">
+                <div class="content">
+                    Johnny Green
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/slider-guitar-two.jpg">
+                <div class="content">
+                    Billie Joe Armstrong
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/slider-guitar-three.jfif">
+                <div class="content">
+                    Eddie Van Halen
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/slider-guitar-four.jfif">
+                <div class="content">
+                    James Hetfield
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/slider-guitar-five.jfif">
+                <div class="content">
+                    Noel Gallagher
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fender-container">
+    <img src="images/fender-guitar.png">
+    </div>
+
+    <div class="line-container">
+        <div class="line"></div>
+        <div class="circle"></div>
+    </div>
+
+
   </div>
 
-  <div id="bands" class="section" style="display: none;">
+  <div id="bands" class="section">
     <h2>Bands</h2>
   </div>
 
-  <div id="game" class="section" style="display: none;">
+  <div id="game" class="section">
     <h2>Memory Card Game</h2>
     
     <div id="timer">Time: 0s</div>
-    <button id="startButton">Start Game</button>
-    <div id="gameBoard" class="game-board"></div>
+    <button id="start-button">Start Game</button>
+    <div id="game-board-js" class="game-board"></div>
 
-    <div id="winScreen" style="display: none;">
-        <h2 id="winText">You Win!</h2>
-        <button id="restartButton">Restart Game</button>
-
+    <div id="win-screen">
+        <h2 id="win-text">You Win!</h2>
+        <button id="restart-button">Restart Game</button>
     </div>
     
   </div>
