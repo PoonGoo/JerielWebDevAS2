@@ -111,9 +111,37 @@ document.addEventListener("DOMContentLoaded", function() {
             itemActive = index;
             showSlider();
         })
-    })
+    }) 
 
+    //For guitar grid content clickable
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const caption = document.getElementById('caption');
+    const closeBtn = document.querySelector('.close');
 
+    const imageGuitarGrid = document.querySelectorAll('.guitar-grid img');
+
+    imageGuitarGrid.forEach((img) => {
+        img.addEventListener('click', function() {
+            lightbox.style.display = 'block';
+            lightboxImg.src = this.src;
+            caption.textContent = this.alt;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+
+  
+    
+    
      //-------------------------GALLERY PAGE END ------------------
 
 
@@ -164,11 +192,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    const flipSound = document.getElementById("flip-sound");
+
+
     function flipCard(card) {
         if (flippedCards.length < 2 && !card.classList.contains("flipped")) {
             card.classList.add("flipped");
             flippedCards.push(card);
-
+            flipSound.play();
             if (flippedCards.length === 2) {
                 checkForMatch();
             }
@@ -241,5 +272,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     startButton.addEventListener("click", startGame);
     restartButton.addEventListener("click", startGame);
+
+    
 
     });
