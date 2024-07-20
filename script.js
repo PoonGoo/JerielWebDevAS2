@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll(".nav-link");
     const sections = document.querySelectorAll(".section");
 
+    function closeNavBar() {
+        const navBar = document.querySelector(".nav-bar");
+        navBar.classList.remove("active");
+    }
+
     links.forEach(link => {
         link.addEventListener("click", function(e) {
             e.preventDefault();
@@ -15,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             links.forEach(link => link.classList.remove("active"));
             this.classList.add("active");
+            
+            closeNavBar(); 
         });
     });
 
@@ -23,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     hamburger.onclick = function() {
         const navBar = document.querySelector(".nav-bar");
         navBar.classList.toggle("active");
-    }
+    };
 
     // Typewriter effect
     const typewriterContainer = document.getElementById("typewriter-container");
@@ -56,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     setTimeout(type, newTextDelay);
-
 
 
     //-------------------------GALLERY PAGE START ------------------
@@ -263,9 +269,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function endGame() {
         clearInterval(timerInterval);
         winScreen.style.display = "block";
-        gameBoard.innerHTML = ""; // Remove all cards
+        gameBoard.innerHTML = ""; // Removes all cards
 
-        // Style adjustments for win screen
         winText.style.fontSize = "36px";
         winText.style.color = "#fefefe";
     }

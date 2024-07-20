@@ -101,8 +101,6 @@
             opacity: 50%;
         }
 
-        /*----------HOME PAGE KURT END------------*/
-
         /* Home Info Section */
         .home-info {
             display: flex;
@@ -193,7 +191,26 @@
         .album-cover:hover {
             transform: rotateY(0);
         }
-    /*-------------HOME PAGE END----------*/
+
+    /* Media query for tablets */
+    @media (max-width: 800px) {
+        .home-kurt-container {
+            flex-direction: column; /* Change flex direction to column */
+            align-items: center; /* Center align items */
+        }
+
+        .kurt-img {
+            width: 100%;
+            height: auto; 
+            margin-left: 0; 
+            margin-top: 20px; 
+            border-radius: 5px; 
+        }
+        .info-img {
+            width: 400px;
+        }
+}
+            /*-------------HOME PAGE END----------*/
 
     /*---------------- GALLERY PAGE END ----------------*/
 
@@ -361,20 +378,14 @@
         inset: auto 10px 10px 10px;
     }
 
-    /* .fender-container
-    {
-        display: flex;
-        justify-content: center;
-        margin-top: 200px;
-    } */
-
-    .guitar-grid-parent  {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center;     /* Center vertically */
-        height: 100vh;        
-        width: 100vw;           
-    }
+ /* Guitar Grid Parent Style */
+.guitar-grid-parent {
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers children horizontally */
+    width: 100%;
+    padding: 20px; /* Optional padding */
+}
     .guitar-grid {
         --s: 250px; /* control the size */
         --g: 10px;  /* control the gap */
@@ -448,17 +459,44 @@
         padding: 10px 20px;
     }
 
+    .honorable-header {
+        text-align: center; /* Center-aligns the header text */
+        margin-bottom: 20px; /* Adds some space below the header */
+        width: 100%; /* Ensures the header takes full width for centering */
+    }
+    
+    .honorable-header h2 {
+        font-size: 36px; /* Adjust font size as needed */
+        color: #fefefe; /* Sets text color */
+        font-weight: bold; /* Makes the font bold */
+        margin: 0; /* Removes default margin */
+    }
 
-
-    @media screen and (max-width: 678px) {
-        .thumbnail{
-            justify-content: start;
+    @media screen and (max-width: 800px) {
+        .thumbnail {
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+            padding: 0 10px; 
         }
-        .slider .list .item .content h2{
-            font-size: 60px;
+    
+        .thumbnail .item {
+            width: 120px; 
+            height: 180px; 
         }
-        .arrows{
-            top: 10%;
+        
+        .slider .list .item .content h2 {
+            font-size: 40px; 
+        }
+        
+        .arrows {
+            top: 10%; 
+        }
+    
+        .guitar-grid {
+            --s: 100px; 
+            --g: 8px;   
+            --f: 1.3;   
         }
     }
 
@@ -466,10 +504,10 @@
 
     /*----------------GAME PAGE START-----------------*/
     #game h2 {
-        color: #fefefe; /* White text color */
-        font-size: 36px; /* Adjust font size as needed */
-        text-align: center; /* Center align the text */
-        margin-bottom: 20px; /* Space between title and timer */
+        color: #fefefe; 
+        font-size: 36px; 
+        text-align: center; 
+        margin-bottom: 20px; 
     }
 
     #start-button {
@@ -497,8 +535,8 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
-            margin: 20px auto; /* Center the game board */
-            width: fit-content; /* Adjust width as needed */
+            margin: 20px auto; 
+            width: fit-content;
         }
         
         .card {
@@ -506,12 +544,12 @@
             height: 250px;
             position: relative;
             perspective: 1000px;
-            margin: 0 auto; /* Center each card */
-            transition: transform 0.5s ease; /* Smooth transition for transform */
+            margin: 0 auto;
+            transition: transform 0.5s ease;
         }
         
         .card:hover {
-            transform: scale(1.1); /* Scale up the card on hover */
+            transform: scale(1.1); 
         }
         
         .card .card-back,
@@ -563,7 +601,7 @@
             margin: 20px auto;
             display: block;
             width: fit-content;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
         }
         
         #restart-button:hover {
@@ -623,56 +661,58 @@
     /*----------------GAME PAGE END-----------------*/
 
 
-        @media only screen and (max-width: 800px)
-        {
-            .hamburger 
-            {
-                display: block;
-                cursor: pointer;
-            }
-            .hamburger .line 
-            {
-                width: 30px;
-                height: 3px;
-                background: #fefefe;
-                margin: 6px;
-            }
-
-            .nav-bar 
-            {
-                height: 0;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                right: 0;
-                width: 100vw;
-                background: #11101b;
-                transition: 0.2s;
-                overflow: hidden;
-            }
-
-            .nav-bar.active
-            {
-                height: 450px;
-            }
-
-            .nav-bar ul {
-                display: block;
-                width: fit-content;
-                margin: 80px auto 0 auto;
-                text-align: center;
-                transition: 0.5s;
-                opacity: 0;
-            }
-
-            .nav-bar.active ul 
-            {
-                opacity: 1;
-            }
-
-            .nav-bar ul li a 
-            {
-                margin-bottom: 12px;
-            }
+    @media only screen and (max-width: 800px) {
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px; 
+            z-index: 999; 
         }
+    
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background: #fefefe;
+            margin: 6px;
+        }
+    
+        .nav-bar {
+            height: 0;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            background: #11101b;
+            transition: height 0.2s, opacity 0.5s; 
+            overflow: hidden;
+            opacity: 0; 
+            z-index: 998;
+        }
+    
+        .nav-bar.active {
+            height: 450px; 
+            opacity: 1; 
+        }
+    
+        .nav-bar ul {
+            display: block;
+            width: fit-content;
+            margin: 80px auto 0 auto;
+            text-align: center;
+            transition: opacity 0.5s;
+            opacity: 0; 
+        }
+    
+        .nav-bar.active ul {
+            opacity: 1; 
+        }
+    
+        .nav-bar ul li a {
+            margin-bottom: 12px;
+        }
+    }
+    
 
