@@ -502,6 +502,185 @@
 
     /*---------------- GALLERY PAGE END ----------------*/
 
+    /*---------------- BAND PAGE START -----------------*/
+    .music-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 1rem;
+    }
+    .music-heading {
+        font-size: 32px;
+        color: #fefefe;
+        font-weight: bold;
+    }
+
+    #bands .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    .collection {
+        width: 50%;
+        flex: 1;
+        margin-top: 1.5rem;
+    }
+    .collection h2 {
+        color: #fefefe;
+        font-size: 35px;
+    }
+    .lead {
+        max-width: 600px;
+        font-weight: 400;
+        color: #fefefe  ;
+        letter-spacing: 0.5px;
+        line-height: 1.2rem;
+    }
+    .musicbox {
+        margin-top: 1rem;
+    }
+    .musicbox ul li h3{
+        color: #fefefe;
+        font-weight: 400;
+    }
+    .hor {
+        margin: 1rem 0 1rem 0;
+        max-width: 500px;
+        background-color: #c7d8fc;
+    }
+    .playbox {
+        flex: 1;
+        margin: 0.5rem auto;
+        text-align: center;
+        border-radius: 8px;
+    }
+    .playbox nav {
+        display: block;
+        margin: 3rem auto;
+    }
+    .playbox ul li{
+        list-style: none;
+        display: inline;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .playbox ul li a {
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        color: #fefefe;
+        transition: all 300ms;
+    }
+    .playbox ul li a:hover {
+        background-color: #c7d8fc8c;
+    }
+    .controller {
+        margin: 2.5rem auto;
+        width: 100%;
+        max-width: 400px;
+        min-height: 500px;
+    }
+    .circle {
+        width: 250px;
+        height: 250px;
+        background-color: #222427;
+        border-radius: 50%;
+        margin: 2rem auto;
+        display: flex;
+        border: 3px solid #37b0d8;
+        border-top: 3px solid #0254ec;
+       
+    }
+    .circle2 {
+        width: 180px;
+        height: 180px;
+        background-color: #252629;
+        border-radius: 50%;
+        border: 3px solid #282529;
+        border-top: 3px solid #66bfe9;
+        align-self: center;
+        display: flex;
+        margin: auto;
+        
+    }
+    .circle2 .fluid-img{
+        width: 100%;
+        max-width: 160px;
+        height: auto;
+        border-radius: 50%;
+        align-self: center;
+        margin: auto;
+    }
+    #song-name{
+        color: #fefefe;
+        font-weight: bold;
+    }
+    .circle.animate {
+        animation: anticlock 6s infinite linear;
+    }
+    .circle2.animate {
+        animation: clockwise 6s infinite linear;
+    }
+    .media-btn {
+        width: 100%;
+        max-width: 50px;
+        height: auto;
+        margin: auto;
+        cursor: pointer;
+        margin: 1rem;
+    }
+    @keyframes anticlock {
+        from {
+            transform: rotate(360deg);
+        } to {
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes clockwise {
+        from {
+            transform: rotate(0deg);
+        } to {
+            transform: rotate(360deg);
+        }
+    }
+    @media (max-width: 800px) {
+        #bands .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column-reverse;
+        }
+        .collection {
+            width: 90%;
+            flex: 1;
+            margin: 1.5rem auto;
+        }
+        .playbox {
+            flex: 1;
+            width: 90%;
+        }
+    }
+    .card-body {
+        width: 100%;
+        max-width: 550px;
+        min-height: 100vh;
+        background-color: #c7d8fc8c;
+        margin: 1rem auto;
+        border-radius: 8px;
+    }
+    .card-body nav{
+        margin: 0;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .card-body .about{
+        padding: 1rem;
+    }
+    .about .center {
+        text-align: center;
+    }
+    /*---------------- BAND PAGE END -----------------*/
+
     /*----------------GAME PAGE START-----------------*/
     #game h2 {
         color: #fefefe; 
