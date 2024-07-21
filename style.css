@@ -192,11 +192,11 @@
             transform: rotateY(0);
         }
 
-    /* Media query for tablets */
+   
     @media (max-width: 800px) {
         .home-kurt-container {
-            flex-direction: column; /* Change flex direction to column */
-            align-items: center; /* Center align items */
+            flex-direction: column; 
+            align-items: center; 
         }
 
         .kurt-img {
@@ -350,9 +350,9 @@
         background-color: transparent;
     }
 
-    .thumbnail::-webkit-scrollbar{
+    /* .thumbnail::-webkit-scrollbar{
         width: 0;
-    }
+    } */
 
     .thumbnail .item{
         width: 150px;
@@ -378,14 +378,13 @@
         inset: auto 10px 10px 10px;
     }
 
- /* Guitar Grid Parent Style */
-.guitar-grid-parent {
-    display: flex;
-    flex-direction: column; /* Aligns children vertically */
-    align-items: center; /* Centers children horizontally */
-    width: 100%;
-    padding: 20px; /* Optional padding */
-}
+    .guitar-grid-parent {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        width: 100%;
+        padding: 20px; 
+    }
     .guitar-grid {
         --s: 250px; /* control the size */
         --g: 10px;  /* control the gap */
@@ -460,16 +459,16 @@
     }
 
     .honorable-header {
-        text-align: center; /* Center-aligns the header text */
-        margin-bottom: 20px; /* Adds some space below the header */
-        width: 100%; /* Ensures the header takes full width for centering */
+        text-align: center;
+        margin-bottom: 20px; 
+        width: 100%;
     }
     
     .honorable-header h2 {
-        font-size: 36px; /* Adjust font size as needed */
-        color: #fefefe; /* Sets text color */
-        font-weight: bold; /* Makes the font bold */
-        margin: 0; /* Removes default margin */
+        font-size: 36px;
+        color: #fefefe; 
+        font-weight: bold; 
+        margin: 0; 
     }
 
     @media screen and (max-width: 800px) {
@@ -534,7 +533,7 @@
         font-weight: 400;
         color: #fefefe  ;
         letter-spacing: 0.5px;
-        line-height: 1.2rem;
+        font-size: 25px;
     }
     .musicbox {
         margin-top: 1rem;
@@ -553,26 +552,6 @@
         margin: 0.5rem auto;
         text-align: center;
         border-radius: 8px;
-    }
-    .playbox nav {
-        display: block;
-        margin: 3rem auto;
-    }
-    .playbox ul li{
-        list-style: none;
-        display: inline;
-        margin: 1rem;
-        padding: 1rem;
-    }
-    .playbox ul li a {
-        text-decoration: none;
-        padding: 8px 15px;
-        border-radius: 5px;
-        color: #fefefe;
-        transition: all 300ms;
-    }
-    .playbox ul li a:hover {
-        background-color: #c7d8fc8c;
     }
     .controller {
         margin: 2.5rem auto;
@@ -679,6 +658,8 @@
     .about .center {
         text-align: center;
     }
+
+    
     /*---------------- BAND PAGE END -----------------*/
 
     /*----------------GAME PAGE START-----------------*/
@@ -836,9 +817,38 @@
                 transform: scale(1);
             }
         }
+
+        @media (max-width: 800px) {
+            #game h2 {
+                font-size: 28px; 
+            }
+        
+            #start-button, #restart-button {
+                font-size: 20px;
+                padding: 12px 25px;
+            }
+        
+            #timer {
+                font-size: 32px;
+            }
+        
+            .game-board {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+        
+            .card {
+                width: 150px;
+                height: 200px;
+            }
+            
+            #win-Text {
+                font-size: 28px;
+            }
+        }
         
     /*----------------GAME PAGE END-----------------*/
-
+    
 
     @media only screen and (max-width: 800px) {
         .hamburger {
